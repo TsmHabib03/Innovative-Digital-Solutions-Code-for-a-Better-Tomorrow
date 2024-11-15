@@ -52,10 +52,58 @@ body {
   text-align: center;
   
 }
-#about{
-  background: url('Headerv1-Digital-Solutions.jpg') center/cover no-repeat;
- 
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #2d608f;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    
+    
 }
+
+/* Container for the Dropdown */
+.dropdown {
+    position: relative;
+    bottom:500px;
+    right:400px;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0f0f0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(45,96,143);
+    color:white;
+    
+}
+
 
 .features-section {
   background-color: #f9f9f9;
