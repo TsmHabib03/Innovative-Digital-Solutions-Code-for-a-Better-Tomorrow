@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+font-family: "Host Grotesk", sans-serif;
   font-weight: 200;
   font-style: normal;
   
@@ -53,57 +53,48 @@ body {
   
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #2d608f;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-    
-    
-}
-
-/* Container for the Dropdown */
+/* Adjusted Dropdown CSS */
 .dropdown {
-    position: relative;
-    bottom:500px;
-    right:400px;
-    display: inline-block;
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Distance from the top of the page */
+  right: 20px; /* Distance from the right of the page */
+  display: inline-block;
 }
 
-/* Dropdown content (hidden by default) */
+.dropbtn {
+  background-color: #2d608f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f0f0f0;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  right:15px;
+  background-color: #FFFFFF;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-/* Show the dropdown content when hovering */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: rgb(45,96,143);
-    color:white;
-    
+  background-color: rgb(45, 96, 143);
+  color: white;
 }
-
 
 .features-section {
   background-color: #f9f9f9;
@@ -123,6 +114,10 @@ body {
   text-align: left;
 }
 
+.feature-card:hover{
+  transform:scale(1.2);
+  
+}
 .footer {
   background: #333;
   color: #fff;
