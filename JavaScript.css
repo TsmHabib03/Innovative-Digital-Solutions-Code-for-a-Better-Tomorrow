@@ -1,0 +1,130 @@
+*{
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.hero-section {
+  background: url('your-hero-image.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.cta-button {
+  background-color:#2d608f;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5cafcf;
+}
+
+.about-section, .features-section, .cta-section {
+  padding: 50px 20px;
+  text-align: center;
+  
+}
+
+
+
+.Page1 {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fade-in 2s ease;
+}
+
+.Page1 h1 {
+  color:  #2d608f;
+  border-bottom: 5px solid   #2d608f;
+  padding-bottom: 10px;
+}
+
+.features-section {
+  background-color: #f9f9f9;
+  margin:0;
+}
+
+.features-section h2 {
+  margin-bottom: 20px;
+}
+
+.feature-card {
+  display: inline-block;
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 500px;
+  text-align: left;
+}
+
+
+
+.photo1{
+  border:none;
+  border-radius:12px;
+  padding-bottom:5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 450px;
+  
+}
+.photo1:hover{
+  transform: scale(1);
+}
+
+h3{
+  color:  #2d608f;
+  border-bottom: 5px solid   #2d608f;
+  padding-bottom: 10px;
+  font-size: 1.5em;
+}
+
+
+
+
+.feature-card1 {
+  display: inline-block;
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width:300px;
+  text-align: left;
+  position: absolute;
+  
+}
+a{
+  border:none;
+  border-radius:5px;
+  color:white;
+  background-color:#3BD900;
+  font-size:20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline:none;
+}
+button:hover{
+  background-color:#97FF71;
+}
