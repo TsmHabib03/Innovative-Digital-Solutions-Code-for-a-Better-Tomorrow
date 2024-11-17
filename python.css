@@ -1,130 +1,162 @@
-*{
+/* Global Styling */
+* {
   font-family: "Host Grotesk", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Hero Section */
 .hero-section {
-  background: url('your-hero-image.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('your-hero-image.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 100px 20px;
 }
 
-
 .hero-section h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  animation: fade-in 1.5s ease-in-out;
 }
 
 .hero-section p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 1em;
 }
 
 .cta-button {
-  background-color:#2d608f;
+  background-color: #2d608f;
   color: #fff;
   padding: 0.8em 1.5em;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #5cafcf;
+  transform: scale(1.1);
 }
 
-.about-section, .features-section, .cta-section {
-  padding: 50px 20px;
-  text-align: center;
-  
-}
-
-
-
-.Page1 {
+/* Page Content Section */
+.page-content {
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  max-width: 1200px;
-  background-color: #fff;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: slide-in 1.5s ease;
+}
+
+.page-content h1 {
+  color: #2d608f;
+  border-bottom: 3px solid #2d608f;
+  padding-bottom: 10px;
+}
+
+.page-content p {
+  margin: 10px 0;
+}
+
+/* Feature Cards */
+.feature-card,
+.feature-card1 {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fade-in 2s ease;
 }
 
-.Page1 h1 {
-  color:  #2d608f;
-  border-bottom: 5px solid   #2d608f;
-  padding-bottom: 10px;
+.feature-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.features-section {
-  background-color: #f9f9f9;
-  margin:0;
-}
-
-.features-section h2 {
-  margin-bottom: 20px;
-}
-
-.feature-card {
-  display: inline-block;
-  background: #fff;
-  padding: 20px;
-  margin: 10px;
-  
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 500px;
-  text-align: left;
-}
-
-
-
-.photo1{
-  border:none;
-  border-radius:12px;
-  padding-bottom:5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 500px;
-  
-}
-.photo1:hover{
+.feature-card img:hover {
   transform: scale(1.1);
 }
 
-h3{
-  color:  #2d608f;
-  border-bottom: 5px solid   #2d608f;
-  padding-bottom: 10px;
-  font-size: 1.5em;
+.feature-card h3,
+.feature-card1 h3 {
+  color: #2d608f;
+  margin-bottom: 10px;
 }
 
-
-
-
-.feature-card1 {
+/* Learn More Button */
+.feature-card1 a {
   display: inline-block;
-  background: #fff;
-  padding: 20px;
-  margin: 10px;
-  font-size: 1.1em;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width:300px;
-  text-align: left;
-  position: absolute;
-  
-}
-a{
-  border:none;
-  border-radius:5px;
-  color:white;
-  background-color:#3BD900;
-  font-size:20px;
-  padding: 10px 15px;
+  background-color: #3bd900;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
   text-decoration: none;
-  outline:none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-button:hover{
-  background-color:#97FF71;
+
+.feature-card1 a:hover {
+  background-color: #97ff71;
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background: #2d608f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2em;
+  }
+
+  .page-content,
+  .feature-card,
+  .feature-card1 {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    padding: 0.6em 1.2em;
+  }
 }

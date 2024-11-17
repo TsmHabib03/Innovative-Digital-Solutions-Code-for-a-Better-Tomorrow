@@ -2,106 +2,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-font-family: "Host Grotesk", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  
+  font-family: "Poppins", sans-serif;
 }
- 
-  
-
 
 body {
   line-height: 1.6;
 }
 
+.link{
+  outline:none;
+  text-decoration: none;
+  background:none;
+  color:#333;
+}
+.link:hover{
+  color:#2d608f;
+}
+
 .hero-section {
-  background: url('your-hero-image.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-hero-image.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 150px 20px;
+  animation: fade-in 2s ease;
 }
 
-
-.hero-section h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
+.hero-section .hero-content {
+  animation: slide-up 1.5s ease;
 }
 
-.hero-section p {
-  font-size: 1.5em;
-  margin-bottom: 1em;
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .cta-button {
-  background-color:#2d608f;
+  background-color: #2d608f;
   color: #fff;
-  padding: 0.8em 1.5em;
+  padding: 1em 2em;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top:10px;
 }
 
 .cta-button:hover {
   background-color: #5cafcf;
+  transform: scale(1.05);
 }
 
 .about-section, .features-section, .cta-section {
   padding: 50px 20px;
   text-align: center;
-  
-}
-
-/* Adjusted Dropdown CSS */
-.dropdown {
-  position: absolute; /* Absolute positioning */
-  top: 20px; /* Distance from the top of the page */
-  right: 20px; /* Distance from the right of the page */
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: #2d608f;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right:15px;
-  background-color: #FFFFFF;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: rgb(45, 96, 143);
-  color: white;
-}
-
-.features-section {
-  background-color: #f9f9f9;
-}
-
-.features-section h2 {
-  margin-bottom: 20px;
 }
 
 .feature-card {
@@ -109,35 +68,66 @@ body {
   background: #fff;
   padding: 20px;
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover{
-  transform:scale(1.2);
-  
+.feature-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-.link{
-  outline:none;
-  color:black;
-  text-decoration: none;
-  
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-.link:hover{
-  color:#160f58;
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fade-in 0.3s ease;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .footer {
   background: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
+
 .footer a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 .footer a:hover {
   color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-card {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .cta-button {
+    padding: 0.8em 1.5em;
+    font-size: 0.9em;
+  }
 }
